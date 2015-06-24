@@ -1,4 +1,4 @@
-Install-Package xPSDesiredStateConfiguration
+Install-Package xPSDesiredStateConfiguration -ForceBootstrap
 
 configuration PSDSCPullServer
 {
