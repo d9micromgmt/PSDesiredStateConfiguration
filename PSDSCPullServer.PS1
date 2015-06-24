@@ -4,7 +4,7 @@ configuration PSDSCPullServer
 {
     param 
     (
-        [valditatenotnullorempty()]
+        [Parameter()]
         [String] $certificatethumbprint
     )
 
@@ -29,6 +29,8 @@ configuration PSDSCPullServer
             ConfigurationPath       = "$env:ProgramFiles\windowspowershell\DscService\Configuration"
             state                   = "Started"
             DependsOn               = "[WindowsFeature]DSCServiceFeature"
+            RegistrationKeyPath     = "$env:PROGRAMFILES\WindowsPowerShell\DscService"   
+            AcceptSelfSignedCertificates = $true
         }
     }
 }
