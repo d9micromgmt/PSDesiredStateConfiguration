@@ -24,7 +24,6 @@ configuration PSDSCPullServer
             EndpointName            = "PSDSCPullServer"
             Port                    = "8080"
             PhsyicalPath            = "$env:SystemDrive\inetpub\wwwroot\PSDSCPullServer"
-            EnableFirewallException = $true
             CertificateThumbprint   = $certificatethumbprint
             ModulePath              = "$env:ProgramFiles\windowspowershell\DscService\Modules"
             ConfigurationPath       = "$env:ProgramFiles\windowspowershell\DscService\Configuration"
