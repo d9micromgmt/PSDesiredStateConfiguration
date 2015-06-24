@@ -1,3 +1,5 @@
+Install-Package xDSCService
+
 configuration PSDSCPullServer
 {
     param 
@@ -6,7 +8,7 @@ configuration PSDSCPullServer
         [String] $certificatethumbprint
     )
 
-    Import-DSCResource -modulename DSCService
+    Import-DSCResource -modulename xPSDesiredStateConfiguration
 
     Node localhost
     {
@@ -16,7 +18,7 @@ configuration PSDSCPullServer
             Name = "DSC-Service"
         }
 
-        DSCService PSDSCPullServer
+        xDSCWebService PSDSCPullServer
         {
             Ensure                  = "Present"
             Name                    = "PSDSCPullServer"
