@@ -21,7 +21,7 @@ configuration PSDSCPullServer
         xDSCWebService PSDSCPullServer
         {
             Ensure                  = "Present"
-            Name                    = "PSDSCPullServer"
+            EndpointName            = "PSDSCPullServer"
             Port                    = "8080"
             PhsyicalPath            = "$env:SystemDrive\inetpub\wwwroot\PSDSCPullServer"
             EnableFirewallException = $true
