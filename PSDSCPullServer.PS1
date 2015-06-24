@@ -1,4 +1,4 @@
-Install-Package xDSCService
+Install-Package xPSDesiredStateConfiguration
 
 configuration PSDSCPullServer
 {
